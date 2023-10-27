@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header id="headbox">
+		<h1 id="namec">Calculator</h1>
+		<form id="formbox">
+		<input type="number" name="number" id="numberf">
+		<input type="number" name="number" id="numbers">
+
+		<input type="submit" name="submit" id="submit">
+
+		<div id="add"><h1>Addition is=</h1><h1 id="ans_add"></h1></div>
+			<div id="add"><h1>Subtraction is=</h1><h1 id="ans_sub"></h1></div>
+				<div id="add"><h1>Multiplication is=</h1><h1 id="ans_multi"></h1></div>
+					<div id="add"><h1>Division is=</h1><h1 id="ans_div"></h1></div>
+
+		</form>
+		
+	</header>
+
+	<h3>develop by mustakim</h3>
+	<script>
+
+		var ainn =document.getElementById("submit");
+ainn.onclick=function main(){
+		var fb= Number(document.getElementById("numberf").value);
+	var sb=Number(document.getElementById("numbers").value);
+	adding(fb,sb);
+	sub(fb,sb);
+	multi(fb,sb);
+	stub(fb,sb);
+	return false;
+
+
+}
+function adding(f,s){
+var add=document.getElementById("ans_add");
+add.innerHTML=f+s;
+
+
+}
+
+function sub(f,s){
+	var subt =document.getElementById("ans_sub");
+	subt.innerHTML=f-s;
+}
+
+function multi(f,s){
+	var subtt =document.getElementById("ans_multi");
+	subtt.innerHTML=f*s;
+}
+
+function stub(f,s){
+	var surbt =document.getElementById("ans_div");
+	surbt.innerHTML=f/s;
+}
+
+
+
+
+	</script>
+
+</body>
+</html>
